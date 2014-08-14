@@ -1,4 +1,4 @@
-# Simple-Wikipedia-Crawler
+# Simple Wikipedia Crawler
 
 A simple crawler for Wikipedia pages.
 Given a Wikipedia page title it finds every internal link and keeps crawling until reaching the given depth.
