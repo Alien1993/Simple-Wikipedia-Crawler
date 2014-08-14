@@ -38,7 +38,8 @@ class Crawler:
             print (link.title() + ' --> ' + url)
             file_link.write(link.title() + ' --> ' + url + '\n')
 
-        self.depth_counter += 1
+        if depth != 0:
+            self.depth_counter += 1
 
         try:
             self.crawl(self.links_queue._get(), depth)
@@ -74,7 +75,7 @@ def main():
     try:
         crawling_depth = int(raw_input('Tell me a number to let me know how deep the rabbit hole should I go. '))
     except ValueError:
-        crawling_depth = 1
+        crawling_depth = 0
 
     try:
 
