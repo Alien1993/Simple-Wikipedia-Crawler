@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __author__ = 'Alien'
-__version__ = '1.0'
+__version__ = '1.1'
 __doc__ = '''
 Simple Wikipedia Crawler
 
@@ -83,10 +83,16 @@ def main():
 
     except KeyboardInterrupt:
         print 'Program stopped.'
-    except StandardError:
-        print 'End!'
 
+    print '\n'
 
+    donation_answer = raw_input("This project wouldn't have been possible without the existence of the Wikimedia Foundation."
+                                "Do you want to make a donation to them? (Write Y or N)")
+
+    donation_answer = donation_answer.upper()
+
+    if donation_answer == 'Y' or donation_answer == 'YES':
+        wikipedia.donate()
 
 if __name__ == '__main__':
     main()
